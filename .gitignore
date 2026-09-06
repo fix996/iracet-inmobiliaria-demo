@@ -1,0 +1,9 @@
+node_modules/
+dist/
+research/*.html
+research/*raw*
+qa/
+*.log
+*.tsbuildinfo
+research/audit.json
+research/*-text.txt
