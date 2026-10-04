@@ -1,14 +1,14 @@
-import { ArrowRight, ArrowUpRight, House, MapPin, MessageCircle } from 'lucide-react';
-import { asset, intents, money, properties, wa } from './data';
+import { ArrowRight, ArrowUpRight, Building2, House, KeyRound, MapPin } from 'lucide-react';
 
 export const sections = [
-  { slug: 'servicios', title: 'Servicios', lead: 'Compra, alquiler y venta en un mismo lugar.', items: ['Comprar una propiedad', 'Alquilar una propiedad', 'Vender una propiedad'] },
-  { slug: 'propietarios', title: 'Para propietarios', lead: 'Un espacio para conversar sobre tu propiedad.', items: ['Venta', 'Alquiler', 'Primera consulta'] },
-  { slug: 'tasaciones', title: 'Tasaciones', lead: 'Una futura sección para solicitar una evaluación.', items: ['Características del inmueble', 'Ubicación', 'Consulta personalizada'] },
-  { slug: 'nosotros', title: 'Sobre Gaspar', lead: 'Atención local en Cruz del Eje.', items: ['Presentación profesional', 'Forma de trabajo', 'Contacto directo'] },
-  { slug: 'zonas', title: 'Zonas', lead: 'Explorá Cruz del Eje y sus alrededores.', items: ['Cruz del Eje', 'Camino al Dique', 'Otras zonas a confirmar'] },
-  { slug: 'preguntas', title: 'Preguntas frecuentes', lead: 'Respuestas simples antes de dar el próximo paso.', items: ['Disponibilidad de propiedades', 'Cómo coordinar una visita', 'Consultas sobre tasaciones'] },
-  { slug: 'contacto', title: 'Contacto', lead: 'Un punto de encuentro para tu consulta.', items: ['WhatsApp', 'Correo electrónico', 'Ubicación a confirmar'] },
+  { slug: 'propiedades', title: 'Propiedades', lead: 'Un espacio para descubrir inmuebles en venta y alquiler.', items: ['Casas y departamentos', 'Terrenos', 'Filtros por tipo y ubicación'] },
+  { slug: 'servicios', title: 'Servicios', lead: 'Cada operación tendrá un punto de partida claro.', items: ['Comprar', 'Alquilar', 'Vender'] },
+  { slug: 'propietarios', title: 'Para propietarios', lead: 'Una sección para quienes quieran ofrecer un inmueble.', items: ['Presentar una propiedad', 'Conocer el proceso', 'Solicitar una consulta'] },
+  { slug: 'tasaciones', title: 'Tasaciones', lead: 'Un lugar para explicar cómo solicitar una evaluación.', items: ['Tipo de inmueble', 'Ubicación', 'Características principales'] },
+  { slug: 'nosotros', title: 'Sobre Guillermo', lead: 'Una presentación profesional breve.', items: ['Quién es', 'Cómo trabaja', 'Zona de atención'] },
+  { slug: 'zonas', title: 'Zonas', lead: 'Información local para orientar cada búsqueda.', items: ['Cruz del Eje', 'Alrededores', 'Zonas por confirmar'] },
+  { slug: 'preguntas', title: 'Preguntas frecuentes', lead: 'Respuestas claras para las dudas habituales.', items: ['Disponibilidad', 'Visitas', 'Documentación'] },
+  { slug: 'contacto', title: 'Contacto', lead: 'Los canales de consulta se agregarán más adelante.', items: ['Canales de atención', 'Horarios', 'Ubicación'] },
 ] as const;
 
 export type InstitutionalSection = (typeof sections)[number];
@@ -24,62 +24,71 @@ export function InstitutionalPage({ section }: { section: InstitutionalSection }
       </div>
       <div className="demo-notice" role="note">
         <strong>Esta sección todavía es una demo.</strong>
-        <p>Así podría organizarse en la web institucional. Los contenidos definitivos se definirían con la inmobiliaria.</p>
+        <p>La estructura y el contenido final se definirán con Guillermo. Por ahora no hay propiedades ni datos de contacto confirmados para publicar.</p>
       </div>
       <div className="institutional-list" aria-label={`Contenido previsto para ${section.title}`}>
         {section.items.map((item, index) => <div key={item}><span>0{index + 1}</span><strong>{item}</strong></div>)}
       </div>
-      {section.slug === 'contacto' ? (
-        <div className="institutional-actions">
-          <a className="button primary" href={wa(intents.visita)} target="_blank" rel="noopener noreferrer"><MessageCircle size={17} /> Consultar por WhatsApp</a>
-          <a className="text-link" href="mailto:gaspar.rednova@gmail.com">gaspar.rednova@gmail.com <ArrowUpRight size={16} /></a>
-        </div>
-      ) : (
-        <div className="institutional-actions">
-          <a className="button primary" href="#/propiedades">Ver propiedades de la demo <ArrowUpRight size={17} /></a>
-        </div>
-      )}
+      {section.slug === 'contacto' && <p className="contact-pending">Teléfono, correo y dirección: pendientes de confirmación.</p>}
+      <div className="institutional-actions"><a className="button primary" href="#/">Volver a la portada <ArrowUpRight size={17} /></a></div>
     </section>
   );
 }
+
+const steps = [
+  { icon: House, title: 'Propiedades', text: 'Una selección de inmuebles cuando el inventario esté confirmado.', href: '#/seccion/propiedades' },
+  { icon: KeyRound, title: 'Servicios', text: 'Compra, alquiler y venta explicados con sencillez.', href: '#/seccion/servicios' },
+  { icon: Building2, title: 'Para propietarios', text: 'Un recorrido claro para ofrecer una propiedad.', href: '#/seccion/propietarios' },
+] as const;
 
 export function HomeLanding() {
   return (
     <>
       <section className="hero">
-        <div className="hero-image"><img src={asset(properties[0].images[0])} alt="Parque y casa publicada en Camino al Dique, Cruz del Eje" fetchPriority="high" width="1500" height="1000" /></div>
-        <div className="hero-shade" />
+        <div className="hero-glow" aria-hidden="true" />
         <div className="hero-content container">
-          <span className="eyebrow"><span className="small-line" /> CRUZ DEL EJE · CÓRDOBA</span>
-          <h1>Hay un lugar<br />para tu <em>próxima historia.</em></h1>
-          <p>Propiedades en Cruz del Eje y alrededores. Una forma simple de conocer opciones y empezar a conversar.</p>
-          <div className="hero-buttons">
-            <a className="button warm" href="#/propiedades">Ver propiedades <ArrowUpRight size={18} /></a>
-            <a className="hero-owner" href="#/seccion/propietarios">Tengo una propiedad <ArrowUpRight size={17} /></a>
+          <div className="hero-copy">
+            <span className="eyebrow"><span className="small-line" /> GUILLERMO IRACET · CRUZ DEL EJE</span>
+            <h1>Hay un lugar para tu <em>próxima historia.</em></h1>
+            <p>Una propuesta web para explorar propiedades y encontrar el próximo paso con claridad.</p>
+            <div className="hero-buttons">
+              <a className="button warm" href="#/seccion/propiedades">Conocer la propuesta <ArrowUpRight size={18} /></a>
+              <a className="hero-owner" href="#/seccion/servicios">Ver servicios <ArrowUpRight size={17} /></a>
+            </div>
+            <span className="hero-status">Demo en desarrollo · Contenidos sujetos a confirmación</span>
+          </div>
+          <div className="hero-architecture" aria-hidden="true">
+            <div className="architecture-sky" />
+            <div className="architecture-house">
+              <div className="architecture-window" />
+              <div className="architecture-door" />
+            </div>
+            <div className="architecture-path" />
+            <div className="architecture-caption"><MapPin size={14} /> CRUZ DEL EJE · CÓRDOBA</div>
           </div>
         </div>
       </section>
       <section className="home-preview section container" aria-labelledby="home-preview-title">
         <div className="section-top">
-          <div><span className="eyebrow">UNA MUESTRA DE LA DEMO</span><h2 id="home-preview-title">Explorá algunas propiedades.</h2><p>Precios y disponibilidad sujetos a confirmación.</p></div>
-          <a className="text-link" href="#/propiedades">Ver catálogo <ArrowUpRight size={18} /></a>
+          <div><span className="eyebrow">LA FUTURA WEB INSTITUCIONAL</span><h2 id="home-preview-title">Lo esencial, en un solo lugar.</h2><p>Estas secciones muestran cómo podría organizarse el sitio definitivo.</p></div>
         </div>
         <div className="home-preview-grid">
-          {properties.filter(property => property.featured).slice(0, 3).map(property => (
-            <a className="home-preview-card" href={`#/propiedad/${property.slug}`} key={property.id}>
-              <img src={asset(property.images[0])} alt={`${property.type} publicada en ${property.address}`} loading="lazy" width="640" height="450" />
-              <div><span><MapPin size={14} /> {property.zone} · {property.type}</span><h3>{property.address}</h3><strong>{money(property)}</strong><small>Consultar disponibilidad <ArrowUpRight size={14} /></small></div>
+          {steps.map(({ icon: Icon, title, text, href }) => (
+            <a className="home-preview-card" key={title} href={href}>
+              <Icon size={28} strokeWidth={1.3} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+              <span>Ver sección <ArrowUpRight size={16} /></span>
             </a>
           ))}
         </div>
       </section>
       <section className="home-next-step">
         <div className="container home-next-layout">
-          <div><span className="eyebrow">ATENCIÓN LOCAL</span><h2>Conversemos sobre tu próximo paso.</h2><p>Comprar, alquilar o consultar por una propiedad.</p></div>
-          <a className="button warm" href={wa(intents.visita)} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> Contactar por WhatsApp</a>
+          <div><span className="eyebrow">UNA DEMO, UN PUNTO DE PARTIDA</span><h2>Una presencia digital preparada para crecer.</h2><p>Textos, propiedades y medios de contacto se agregarán después de validarlos con Guillermo.</p></div>
+          <a className="button warm" href="#/seccion/contacto">Ver contacto de muestra <ArrowUpRight size={18} /></a>
         </div>
       </section>
-      <div className="home-demo-note container"><House size={17} /><p>Demo conceptual no oficial. Las otras secciones del menú muestran cómo podría organizarse la futura web institucional.</p></div>
     </>
   );
 }

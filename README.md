@@ -1,6 +1,6 @@
-# Gaspar Tapia Iracet · Demo inmobiliaria de Cruz del Eje
+# Guillermo Iracet · Demo inmobiliaria institucional
 
-Demo conceptual no oficial de una futura web institucional, con una portada breve, un menú de secciones de muestra y seis publicaciones consultadas el 6 de septiembre de 2026. No sustituye el sitio de Red Nova.
+Propuesta conceptual no oficial para Cruz del Eje. La portada presenta la idea general y el menú muestra las secciones que podría tener una web institucional. Cada sección avisa que sigue siendo una demo.
 
 ## Desarrollo
 
@@ -11,26 +11,16 @@ npm run build
 npm run preview
 ```
 
-React, TypeScript y Vite. Base `/iracet-inmobiliaria-demo/`, navegación mediante hash para soportar enlaces directos y recargas en GitHub Pages. El workflow publica `dist` al actualizar `main`.
+React, TypeScript y Vite. La base de publicación es `/iracet-inmobiliaria-demo/`. La navegación usa rutas hash para que los enlaces directos funcionen en GitHub Pages. El workflow de `.github/workflows/pages.yml` publica `dist` al actualizar `main`.
 
-## Funciones
+## Alcance
 
-- Seis fichas con 109 imágenes WebP, galerías completas y ampliación accesible mediante diálogo nativo, teclado y miniaturas.
-- Filtros por operación, tipo, zona, moneda, precios, dormitorios, características y destacadas; orden de precios por moneda.
-- Favoritos y comparación de hasta tres avisos con persistencia local.
-- Consultas de WhatsApp individuales y mensajes para comprar, alquilar, tasar, ofrecer una propiedad, permutar y visitar.
-- Portada institucional breve; el menú desplegable presenta servicios, propietarios, tasaciones, perfil, zonas, preguntas y contacto como vistas expresamente demostrativas.
-- Las fichas de propiedades conservan mapas orientativos a pedido.
-- Diseño adaptable, navegación por teclado, estados vacíos y noindex.
+- Portada breve y menú desplegable con Propiedades, Servicios, Para propietarios, Tasaciones, Sobre Guillermo, Zonas, Preguntas frecuentes y Contacto.
+- Ninguna sección muestra inventario real, precios, teléfono, correo, dirección, horarios ni enlaces de contacto activos.
+- Los avisos e imágenes que antes pertenecían a publicaciones bajo el nombre de Gaspar Tapia Iracet se retiraron de esta versión. No se atribuyen a Guillermo.
+- No hay backend, formularios, cuentas, pagos ni almacenamiento local. La página incluye `noindex` mientras sea una demo.
+- El nombre Guillermo Iracet se usa a pedido del creador de la demo. El contenido comercial definitivo requiere confirmación con Guillermo. Ver [fuentes y alcance](public/fuentes.html).
 
-## Datos y límites
+## Diseño
 
-Leer [fuentes y alcance](public/fuentes.html). La pertenencia pública de Gaspar al equipo de Red Nova y su teléfono se confirmaron en el sitio oficial. La dirección es la publicada por el catálogo local y debe confirmarse antes de asistir. No se verificaron Instagram personal, horarios ni matrícula personal. No se infiere continuidad jurídica con Guillermo Iracet.
-
-Los precios y superficies con contradicciones están aclarados en la interfaz. Aviso activo no equivale a disponibilidad confirmada. La casa y el alquiler de Sarmiento se presentan como avisos separados tal como figuran en el catálogo; comparten algunas fotografías y no se presume que sean unidades independientes.
-
-Los archivos `research/*-text.txt` contienen transcripciones locales para verificar datos; `research/image-sources.json` conserva el origen de cada imagen. Las transcripciones, HTML crudos y pruebas visuales se excluyen de Git. Materiales de terceros no se ofrecen bajo una licencia de libre reutilización. Validar permiso del titular antes de convertir esta demo en sitio oficial.
-
-## Privacidad
-
-Sin backend, analítica, formularios activos ni envíos automáticos. Favoritos/comparador guardan únicamente IDs en este navegador. WhatsApp se abre con mensajes preparados que la persona decide si envía. Mapas externos solo al solicitarlos. Google Fonts carga tipografías externas. No se incluyeron secretos ni credenciales.
+El verde oscuro, crema y dorado suave son una propuesta visual conceptual; no se presentan como colores oficiales aprobados. La ilustración de la portada es decorativa y no representa un inmueble disponible.

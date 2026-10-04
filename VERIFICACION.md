@@ -1,40 +1,15 @@
-# Verificación de la demo
+# Verificación de la demo · Guillermo Iracet
 
-## Actualización institucional · 4 de octubre de 2026
+Actualización del 4 de octubre de 2026. La versión anterior, basada en un catálogo publicado con el nombre de otra persona, permanece recuperable en el historial de Git. Esta versión no muestra esos avisos ni datos de contacto.
 
-- La portada pública quedó reducida a presentación, tres propiedades de muestra y contacto. Las secciones Servicios, Para propietarios, Tasaciones, Sobre Gaspar, Zonas, Preguntas frecuentes y Contacto se abren desde el menú desplegable y muestran un aviso explícito de demo.
-- El catálogo de seis avisos y sus fichas siguen accesibles desde Propiedades; el aviso del catálogo aclara que disponibilidad y precios se confirman.
-- TypeScript y compilación de producción correctos. GitHub Actions publicó el commit `33a8a1c` y la URL pública se revisó en escritorio y a 390 px: menú, portada, una vista institucional, catálogo y una ficha. Sin desbordamiento horizontal ni imágenes cargadas rotas en los recorridos comprobados.
-- La identidad cromática verde oscuro, crema y dorado suave es una propuesta de diseño para esta demo; no se presenta como paleta oficial aprobada. El logo de Red Nova conserva sus colores propios.
-- Las pruebas que siguen corresponden a la versión del 6 de septiembre. Sus formularios, secciones extensas y distribución de portada fueron reemplazados en esta actualización; los resultados históricos no describen esas pantallas actuales.
+## Alcance comprobado
 
-Fecha: 6 de septiembre de 2026. Alcance: seis avisos de Cruz del Eje, portal personal conceptual de Gaspar Tapia Iracet.
+- La portada es una propuesta institucional breve; el menú incluye ocho secciones de muestra.
+- Cada sección declara que es una demo y que el contenido final queda pendiente de validación.
+- No se incluyen propiedades, precios, fotografías de inmuebles, teléfono, correo, dirección, formularios ni enlaces de mensajería.
+- La ilustración arquitectónica de la portada es decorativa. El diseño y sus colores son conceptuales.
+- `noindex`, `nofollow` y `noarchive` continúan en la portada y la página de fuentes.
 
-## Fuentes
+## Pruebas
 
-- Sitio oficial de Red Nova: Gaspar en el equipo, teléfono, email, retrato y logo. CPI 6914 atribuido a la organización.
-- Catálogo y seis fichas consultados directamente: respuesta HTTP 200, avisos incluidos en catálogo, 109 fotografías de sus galerías.
-- Discrepancias de precio, superficie, baños y cercanía al río documentadas en fichas y `public/fuentes.html`.
-- No se verificó disponibilidad con el asesor porque no se autorizaron mensajes. Se informa como “Consultar disponibilidad”. Instagram personal, matrícula personal, horarios y continuidad con Guillermo no se inventan.
-
-## Pruebas realizadas en navegador
-
-- Escritorio: 1440 × 1000. Celular: 390 × 844. Portada, catálogo, fichas, galería ampliada, propietarios, servicios, zonas, profesional, FAQ y contacto inspeccionados visualmente.
-- Filtros: alquiler 1; venta 5; terrenos 1; destacadas 3; USD hasta 60.000 devuelve Sarmiento y Laprida; 4 dormitorios devuelve Mathieu; pileta devuelve Illia, Mathieu y quinta; tipo local devuelve casa + local; Camino al Dique devuelve Illia; ARS devuelve alquiler. Combinación sin coincidencias muestra estado vacío y permite limpiar.
-- Favoritos: alta de dos propiedades, visualización de selección y persistencia tras recarga.
-- Comparador: tres altas, rechazo claro de una cuarta, tabla de características, retiro/vaciado, persistencia tras recarga. Monedas originales sin conversiones. Desplazamiento de la tabla dentro del diálogo en móvil.
-- Galerías: seis fichas abiertas; ampliación, siguiente y acceso a última miniatura verificados: 16, 25, 19, 22, 15 y 12. Imágenes revisadas en hojas de contacto completas; sin interfaces ni marcas de portales incrustadas.
-- Formularios: pruebas con datos ficticios en propietario y contacto; confirmación explícita de que no se envió ni guardó información. Campos requeridos y formato de teléfono mediante validación nativa.
-- Menú móvil abre y se cierra al navegar. Sin desbordamiento horizontal global a 390 px. Entradas de formularios de 16 px en móvil para evitar zoom de foco.
-- Mapa aproximado cargado a pedido. Enlace alternativo de Google Maps disponible.
-- Enlaces de WhatsApp: número profesional confirmado; seis mensajes personalizados con ubicación, importe, moneda y referencia. Sin envíos reales.
-- FAQ abre respuestas mediante controles nativos. Diálogos nativos con cierre y navegación por teclado. Preferencia de movimiento reducido respetada en CSS.
-
-## Compilación y dependencias
-
-- TypeScript y compilación de producción correctos.
-- Dependencia de optimización sharp actualizada a 0.35.4; instalación informó 0 vulnerabilidades. Auditoría de dependencias de producción: 0 vulnerabilidades.
-- Hash routing, base `/iracet-inmobiliaria-demo/`, fuentes y assets incluidos en build. Meta noindex en portada y página de fuentes.
-- Sin backend, sin analítica, sin credenciales. Investigación cruda y pruebas locales excluidas del repositorio público.
-
-Las verificaciones de publicación se completan después del despliegue mediante la URL pública y GitHub Actions.
+Pendiente de completar la verificación visual y pública después del despliegue de esta actualización.
