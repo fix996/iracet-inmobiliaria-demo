@@ -1,5 +1,13 @@
 # Verificación de la demo
 
+## Actualización institucional · 4 de octubre de 2026
+
+- La portada pública quedó reducida a presentación, tres propiedades de muestra y contacto. Las secciones Servicios, Para propietarios, Tasaciones, Sobre Gaspar, Zonas, Preguntas frecuentes y Contacto se abren desde el menú desplegable y muestran un aviso explícito de demo.
+- El catálogo de seis avisos y sus fichas siguen accesibles desde Propiedades; el aviso del catálogo aclara que disponibilidad y precios se confirman.
+- TypeScript y compilación de producción correctos. GitHub Actions publicó el commit `33a8a1c` y la URL pública se revisó en escritorio y a 390 px: menú, portada, una vista institucional, catálogo y una ficha. Sin desbordamiento horizontal ni imágenes cargadas rotas en los recorridos comprobados.
+- La identidad cromática verde oscuro, crema y dorado suave es una propuesta de diseño para esta demo; no se presenta como paleta oficial aprobada. El logo de Red Nova conserva sus colores propios.
+- Las pruebas que siguen corresponden a la versión del 6 de septiembre. Sus formularios, secciones extensas y distribución de portada fueron reemplazados en esta actualización; los resultados históricos no describen esas pantallas actuales.
+
 Fecha: 6 de septiembre de 2026. Alcance: seis avisos de Cruz del Eje, portal personal conceptual de Gaspar Tapia Iracet.
 
 ## Fuentes

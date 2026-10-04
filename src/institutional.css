@@ -60,6 +60,7 @@
 .catalog-demo { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding-top: 35px; font-size: 12px; }
 .catalog-demo strong { color: #806847; }
 .catalog-demo span { color: var(--muted); }
+.catalog-demo + .search-wrap { margin-top: 20px; }
 
 .home-preview { padding-top: 82px; }
 .home-preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
@@ -109,6 +110,7 @@
 }
 @media (max-width: 650px) {
   .catalog-demo { padding-top: 22px; font-size: 10px; }
+  .catalog-demo + .search-wrap { margin-top: 18px; }
   .navigation.open { right: 10px; width: calc(100vw - 20px); max-height: calc(100dvh - 88px); padding: 8px; }
   .navigation a { min-height: 46px; font-size: 13px; }
   .menu-toggle { width: 37px; min-height: 37px; padding: 7px; }
