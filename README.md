@@ -1,6 +1,6 @@
 # Gaspar Tapia Iracet · Demo inmobiliaria de Cruz del Eje
 
-Portal personal conceptual no oficial, con seis publicaciones reales verificadas el 6 de septiembre de 2026. No sustituye el sitio de Red Nova.
+Demo conceptual no oficial de una futura web institucional, con una portada breve, un menú de secciones de muestra y seis publicaciones consultadas el 6 de septiembre de 2026. No sustituye el sitio de Red Nova.
 
 ## Desarrollo
 
@@ -11,7 +11,7 @@ npm run build
 npm run preview
 ```
 
-React, TypeScript y Vite. Base `/iracet-inmobiliaria-demo/`, navegación de fichas mediante hash para soportar enlaces directos y recargas en GitHub Pages. El workflow publica `dist` al actualizar `main`.
+React, TypeScript y Vite. Base `/iracet-inmobiliaria-demo/`, navegación mediante hash para soportar enlaces directos y recargas en GitHub Pages. El workflow publica `dist` al actualizar `main`.
 
 ## Funciones
 
@@ -19,8 +19,8 @@ React, TypeScript y Vite. Base `/iracet-inmobiliaria-demo/`, navegación de fich
 - Filtros por operación, tipo, zona, moneda, precios, dormitorios, características y destacadas; orden de precios por moneda.
 - Favoritos y comparación de hasta tres avisos con persistencia local.
 - Consultas de WhatsApp individuales y mensajes para comprar, alquilar, tasar, ofrecer una propiedad, permutar y visitar.
-- Dos formularios exclusivamente demostrativos, validación y confirmación explícita de que nada se envió.
-- Captación de propietarios, servicios, proceso, zonas, presentación profesional, FAQ, contacto y mapas orientativos a pedido.
+- Portada institucional breve; el menú desplegable presenta servicios, propietarios, tasaciones, perfil, zonas, preguntas y contacto como vistas expresamente demostrativas.
+- Las fichas de propiedades conservan mapas orientativos a pedido.
 - Diseño adaptable, navegación por teclado, estados vacíos y noindex.
 
 ## Datos y límites
@@ -33,4 +33,4 @@ Los archivos `research/*-text.txt` contienen transcripciones locales para verifi
 
 ## Privacidad
 
-Sin backend, analítica ni envíos automáticos. Datos de formularios solo en el DOM y nunca en localStorage. Favoritos/comparador guardan únicamente IDs. WhatsApp se abre con mensajes genéricos de intención o información pública del aviso. Mapas externos solo al solicitarlos. Google Fonts carga tipografías externas. No se incluyeron secretos ni credenciales.
+Sin backend, analítica, formularios activos ni envíos automáticos. Favoritos/comparador guardan únicamente IDs en este navegador. WhatsApp se abre con mensajes preparados que la persona decide si envía. Mapas externos solo al solicitarlos. Google Fonts carga tipografías externas. No se incluyeron secretos ni credenciales.
